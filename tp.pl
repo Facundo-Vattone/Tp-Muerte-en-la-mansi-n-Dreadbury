@@ -13,7 +13,9 @@ odia(tiaAgatha,Persona):-
 odia(mayordomo,Persona):-
     odia(tiaAgatha,Persona).
 
-odia(charles,mayordomo).
+odia(charles,Persona):-
+    viveEnLaMansion(Persona),
+    not(odia(tiaAgatha,Persona)).
 
 /* esMasRico (unaPersona, otraPersona) */
 
@@ -56,4 +58,5 @@ mata(Asesino,Victima):-
       consulta : odia(mayordomo,_).
       respuesta: true ;
                  true.
+                 */
     
